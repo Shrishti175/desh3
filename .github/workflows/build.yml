@@ -1,0 +1,37 @@
+# Desh2/.github/workflows/build.yml
+
+name: Build Python App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Upgrade pip
+      run: python -m pip install --upgrade pip
+
+    - name: Install dependencies (if requirements.txt exists)
+      run: |
+        if [ -f requirements.txt ]; then
+          echo "Installing dependencies..."
+          pip install -r requirements.txt
+        else
+          echo "No requirements.txt found, skipping dependency installation."
+        fi
+
+    - name: Run App
+      run: echo "Add your app run command here"
