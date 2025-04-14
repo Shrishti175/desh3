@@ -1,0 +1,44 @@
+<KendraDetailsScreen>:
+    canvas.before:
+        Rectangle:
+            source: "45.jpg"  # Background image
+            pos: self.pos
+            size: self.size
+
+    MDLabel:
+        font_style: "H5"
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 0, 0, 0, 1  # Black text for contrast
+        font_name: "Roboto-Medium"
+
+    MDCard:
+        size_hint: None, None
+        size: 400, 450  # Increased size of background box
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        elevation: 10
+        radius: [30,]  # Increased corner roundness
+        md_bg_color: 1, 1, 1, 0.85  # White with slight transparency
+        on_release: self.animate()
+
+    MDRaisedButton:
+        md_bg_color: 0.1, 0.5, 0.8, 1  # Professional blue shade
+        theme_text_color: "Custom"
+        text_color: 1, 1, 1, 1  # White text
+        elevation: 12
+        on_release: app.button_press()
+
+    Button:
+        background_normal: ""  # Removes default background
+        background_color: 1, 1, 1, 0  # Fully transparent, removes any bottom color
+        font_size: 18
+        size_hint_y: None
+        height: 50
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 0  # No extra color at the bottom
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [25,]
+        on_press: self.animate()

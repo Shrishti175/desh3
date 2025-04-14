@@ -1,0 +1,36 @@
+[
+    {
+        "city": "Indore (Shivaji nagar kendra)",
+        "vibhag": [
+            "Desh Videsh",
+            "Prashnottar",
+            "Balsanskar (Arti vadnere)"
+        ],
+        "sevekari": [
+            "Vijay Badde(9898989898)",
+            "Nilesh Landge(3434343434)"
+        ],
+        "arti_timings": [
+            "10;30 AM",
+            "6:00 PM"
+        ]
+    },
+    {
+        "city": "",
+        "vibhag": [
+            "",
+            "",
+            ""
+        ],
+        "sevekari": [
+            "",
+            "",
+            ""
+        ],
+        "arti_timings": [
+            "",
+            "",
+            ""
+        ]
+    }
+]
